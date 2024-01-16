@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.Destinations.ExploreDestinationsController" alignment="CENTER"
+    styleClass="background" prefHeight="200.0" prefWidth="650.0" spacing="20"
+    xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView disable="false"
+        fitWidth="650.0"
+        preserveRatio="true">
+        <image>
+            <Image url="image/destination.png" />
+        </image>
+    </ImageView>
+    <Separator />
+    <Label fx:id="welcomeMessage" styleClass="heading"/>
+    <Separator />
+    <HBox>
+        <Button HBox.hgrow="ALWAYS" maxWidth="99999.0" fx:id="viewAllDestinationsBtn"
+            text="View All Destinations"
+            onAction="#handleViewAllDestinations" />
+        <Button HBox.hgrow="ALWAYS" maxWidth="99999.0" fx:id="viewAllDestinationsByCountryBtn"
+            text="view All Destinations by Country"
+            onAction="#handleViewAllDestinationsByCountry" />
+        <Button HBox.hgrow="ALWAYS" maxWidth="99999.0" fx:id="addDestinationBtn"
+            text="Add Destination"
+            onAction="#handleAddDestination" />
+        <Button HBox.hgrow="ALWAYS" maxWidth="99999.0" fx:id="removeDestinationBtn" text="Remove Destination"
+            onAction="#handleRemoveDestination" />
+        <Button HBox.hgrow="ALWAYS" maxWidth="99999.0" fx:id="exitBtn" text="Close"
+            onAction="#handleExit" />
+    </HBox>
+    <stylesheets>
+        <URL value="@../style.css" />
+    </stylesheets>
+</VBox>

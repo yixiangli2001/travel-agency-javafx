@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.AgencyController" alignment="CENTER" styleClass="background"
+    prefHeight="200.0" prefWidth="800.0" spacing="20"
+    xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView disable="false"
+        fitWidth="780.0"
+        preserveRatio="true">
+        <image>
+            <Image url="image/agency.png" />
+        </image>
+    </ImageView>
+    <Separator />
+    <Label fx:id="welcomeMessage" styleClass="heading" />
+    <Separator />
+    <HBox >
+        <Button HBox.hgrow="ALWAYS" prefWidth="200.0" fx:id="exploreFlightsBtn"
+            text="Explore Flights"
+            styleClass="button"
+            onAction="#handleExploreFlights" />
+        <Button HBox.hgrow="ALWAYS" prefWidth="200.0" fx:id="exploreDestinationsBtn"
+            text="Explore Destinations"
+            onAction="#handleExploreDestinations" />
+        <Button HBox.hgrow="ALWAYS" prefWidth="200.0" fx:id="bookATripBtn" text="Book a Trip"
+            styleClass="button"
+            onAction="#handleBookATrip" />
+        <Button HBox.hgrow="ALWAYS" prefWidth="200.0" fx:id="exitBtn" text="Exit"
+            onAction="#handleExit" />
+    </HBox>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</VBox>

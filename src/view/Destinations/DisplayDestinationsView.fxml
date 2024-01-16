@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.Insets?>  
+
+<VBox fx:controller="controller.Destinations.DisplayDestinationsController" alignment="CENTER"
+    styleClass="background" prefHeight="700.0" prefWidth="600.0" spacing="20"
+    xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView disable="false"
+        fitWidth="600.0"
+        preserveRatio="true">
+        <image>
+            <Image url="image/destination.png" />
+        </image>
+    </ImageView>
+    <Separator />
+    <Label text="Destinations" styleClass="heading"/>
+    <Separator />
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn prefWidth="298.0" text="Name" fx:id="nameCol" />
+            <TableColumn prefWidth="298.0" text="Country" fx:id="countryCol" />
+        </columns>
+    </TableView>
+
+    <Button maxWidth="99999.0" fx:id="exitBtn" text="Close"
+        onAction="#handleExit" />
+
+    <stylesheets>
+        <URL value="@../style.css" />
+    </stylesheets>
+</VBox>
